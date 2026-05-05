@@ -103,7 +103,7 @@ header{
     color: var(--text-color);
 }
 .navlink li a:hover{
-    color: #39DB4A;
+    color: var(--nav-hover);
 }
 .icons{
     display: flex;  

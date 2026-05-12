@@ -12,10 +12,15 @@ html{
     --text-color: #272727;
     --nav-hover: #39DB4A;
 }
-[data-theme="dark"] {
+body.dark {
     --bg-color: #121212; 
     --text-color: #ffffff;
 }
+
+body.dark .icon {
+    color: white;
+}
+
 
 body{
     width: 100%;
@@ -124,7 +129,4 @@ header{
     cursor: pointer;
 }
 
-[data-theme="dark"] .icon {
-    color: white;
-}
 

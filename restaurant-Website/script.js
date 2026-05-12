@@ -1,16 +1,16 @@
-const themeToggle = document.getElementById("theme-toggle");
-const themeIcon = document.getElementById("theme-icon");
-const themefoodi = document.getElementById("foodi")
-const body = document.body;
 
-themeToggle.addEventListener('click', () => {
-    if (body.getAttribute('data-theme') === 'dark') {
-        body.removeAttribute('data-theme');
-        themeIcon.innerText = 'wb_sunny';
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+const themefoodi = document.getElementById("foodi");
+
+themeToggle.addEventListener("click", () => {
+    if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
+        themeIcon.innerText = "wb_sunny";
         themefoodi.src = "./image/lightFoodi.png";
     } else {
-        body.setAttribute('data-theme', 'dark');
-        themeIcon.innerText = 'bedtime';
+        document.body.classList.add("dark");
+        themeIcon.innerText = "bedtime";
         themefoodi.src = "./image/drakFoodi.png";
     }
 });

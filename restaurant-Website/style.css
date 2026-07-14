@@ -1,19 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
+
 :root {
     --bg-color: #ffffff;
     --text-color: #272727;
     --nav-hover: #39DB4A;
 }
+
 body.dark {
-    --bg-color: #121212; 
+    --bg-color: #121212;
     --text-color: #ffffff;
 }
 
@@ -22,101 +24,119 @@ body.dark .icon {
 }
 
 
-body{
+body {
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color); 
+    background-color: var(--bg-color);
     color: var(--text-color);
+    transition: all 0.4s ease-in-out;
 }
 
 
-li{
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-header{
+header {
     width: 100%;
     padding: 0px 10px;
-     border: 1px solid red;
+    border: 1px solid red;
 }
 
-.commonContainer{
+.commonContainer {
     width: 100%;
     max-width: 1380px;
     margin: 0px auto;
     border: 1px solid red;
 }
 
-.header{
+.header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding: 25px 0px;
+    padding: 20px 0px;
 }
 
-.headerLogo{
+.headerLogo {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.headerLogo .Foodi{
+.headerLogo .Foodi {
     height: 22px;
 }
-.logoWrappre{
+
+.logoWrappre {
     position: relative;
 }
-.logoWrappre img{
+
+.logoWrappre img {
     width: 34px;
     height: 41px;
 }
-.logoF{
+
+.logoF {
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     inset: 0;
 }
-.logoF img{
+
+.logoF img {
     height: 22px;
     width: 18px;
 }
 
-.navlink{
+.navlink {
     display: flex;
     gap: 30px;
 
 }
-.navlink li{
+
+.navlink li {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.navlink li img{
+
+.navlink li img {
     width: 13px;
     height: 8px;
 }
-.navlink li a{
+
+.navlink li a {
     font-size: 20px;
     font-family: sans-serif;
     font-weight: 500;
     color: var(--text-color);
+    transition: all 0.4s ease-in-out;
 }
-.navlink li a:hover{
+
+.navlink li a.active {
+    /* border-bottom: 3px solid var(--nav-hover); */
     color: var(--nav-hover);
 }
-.icons{
-    display: flex;  
+
+.navlink li a:hover {
+    color: var(--nav-hover);
+}
+
+.icons {
+    display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.phoneBackground{
+.phoneBackground,
+#themeToggle {
     background-color: #39DB4A;
     border-radius: 10px;
     padding: 8px;
@@ -125,8 +145,105 @@ header{
     justify-content: center;
 }
 
-.icon{
+.icon {
     cursor: pointer;
+    font-size: 22px;
+}
+#openMenu{
+    display: none;
+}
+
+.mainContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+    .headerLogo .Foodi {
+        height: 18px;
+    }
+
+    .logoWrappre {
+        position: relative;
+    }
+
+    .logoWrappre img {
+        width: 31px;
+        height: 36px;
+    }
+
+    .logoF {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        inset: 0;
+    }
+
+    .logoF img {
+        height: 18px;
+        width: 16px;
+    }
+
+    .navlink {
+        gap: 25px;
+    }
+
+    .navlink li {
+        gap: 8px;
+    }
+
+    .navlink li img {
+        width: 10px;
+        height: 6px;
+    }
+
+    .navlink li a {
+        font-size: 16px;
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .phoneBackground,
+    #themeToggle {
+        padding: 6px;
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 620px) {
+    .navlink {
+        display: none;
+    }
+
+    .icon:nth-child(2) {
+        display: none;
+    }
+
+    .phoneBackground {
+        display: none;
+    }
+    #openMenu{
+    display: block;
+}
+}

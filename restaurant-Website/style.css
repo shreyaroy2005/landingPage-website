@@ -44,14 +44,12 @@ a {
 header {
     width: 100%;
     padding: 0px 10px;
-    border: 1px solid red;
 }
 
 .commonContainer {
     width: 100%;
-    max-width: 1380px;
+    max-width: 1400px;
     margin: 0px auto;
-    border: 1px solid red;
 }
 
 .header {
@@ -60,7 +58,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding: 20px 0px;
+    padding: 25px 0px;
 }
 
 .headerLogo {
@@ -159,10 +157,196 @@ header {
     display: none;
 }
 
-.mainContainer {
+/* main section start */
+main {
     width: 100%;
-    height: 100vh;
-    background-color: red;
+    height: 100%;
+}
+.hero{
+    width: 100%;
+    height: 100%;
+}
+.heroContainer {
+    display: flex;
+    gap: 15px;
+    padding: 6% 15px;
+    width: 100%;
+    height: 100%;
+}
+
+/* hero text section */
+.heroContainerText {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heroWrapper {
+    width: 80%;
+}
+
+.heroWrapper h2 {
+    font-size: 52px;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.heroWrapper h2 span {
+    color: #39DB4A;
+}
+
+.heroWrapper p {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.heroWrapperBtns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.heroWrapperBtns button:nth-child(1) {
+    background: #39DB4A;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.heroWrapperBtns button:nth-child(2) {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    background: transparent;
+}
+
+.heroWrapperBtns button:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 6px 27px 34px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playIcon {
+    width: 20px;
+    height: 20px;
+}
+
+/* hero image section */
+.heroContainerImage {
+    position: relative;
+    width: 450px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBackground {
+    width: 400px;
+    height: 400px;
+    background-color: #28cb5b;
+    border-radius: 50%;
+    position: relative;
+}
+
+.heroImage {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: -14px;
+    top: -36px;
+}
+
+.leftContanerTag {
+    font-size: 15px;
+    position: absolute;
+    top: 15%;
+    left: -40px;
+    z-index: 3;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+    color: red;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.leftContanerTag::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 14px;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+}
+
+.heroCardWrapper {
+    position: absolute;
+    bottom: -50px;
+    display: flex;
+    gap: 15px;
+    z-index: 3;
+}
+
+.heroCardOne, .heroCardTwo {
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+.leftSide{
+    width: 50px;
+    height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.heroFoodImg{
+    width: 100%;
+    height: 100%;
+}
+.rightSide{
+    display: flex;
+    gap: 4px;
+  flex-direction: column;
+}
+.title{
+    font-size: 16px;
+    color: #121212;
+}
+.star{
+    width: 70%;
+    height: 12px;
+}
+.heroPrice span{
+    font-size: 14px;
+    color: red;
+}
+.heroPrice{
+    font-size: 15px;
+    font-weight: 600;
+    color: #160e0e;
 }
 
 
@@ -176,6 +360,15 @@ header {
 
 
 
+
+
+
+
+@media (max-width: 1000px) {
+    .heroWrapper {
+        width: 100%;
+    }
+}
 
 
 
@@ -235,6 +428,97 @@ header {
     .icon {
         font-size: 18px;
     }
+
+    .heroWrapper h2 {
+        font-size: 42px;
+    }
+
+    .heroWrapper p {
+        font-size: 17px;
+    }
+
+    .heroWrapperBtns button:nth-child(1) {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .heroWrapperBtns button:nth-child(2) {
+        font-size: 13px;
+    }
+
+    .heroWrapperBtns button:nth-child(3) {
+        width: 40px;
+        height: 40px;
+    }
+
+    .playIcon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .heroContainerImage {
+        width: 400px;
+    }
+
+    .heroBackground {
+        width: 350px;
+        height: 350px;
+
+    }
+
+    .heroImage {
+        left: -12px;
+        top: -34px;
+    }
+
+    .leftContanerTag {
+        font-size: 12px;
+        top: 8%;
+        left: -8px;
+        padding: 8px 18px;
+    }
+
+}
+
+@media (max-width: 710px) {
+    .heroContainer {
+        display: block;
+    }
+
+    .heroContainerImage {
+        margin: 35px auto;
+    }
+
+    .heroContainerText {
+        width: 100%;
+    }
+
+    .heroWrapper h2 {
+        font-size: 32px;
+    }
+
+    .heroWrapper p {
+        font-size: 14px;
+    }
+
+    .heroWrapperBtns button:nth-child(1) {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .heroWrapperBtns button:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .heroWrapperBtns button:nth-child(3) {
+        width: 35px;
+        height: 35px;
+    }
+
+    .playIcon {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 @media (max-width: 620px) {
@@ -258,6 +542,7 @@ header {
         left: -100%;
         width: 100%;
         height: 100vh;
+        z-index: 100;
         background-color: white;
         flex-direction: column;
         align-items: center;
@@ -273,5 +558,56 @@ header {
     .navlink li a {
         font-size: 24px;
     }
+
+}
+
+@media (max-width: 500px) {
+    .heroContainerImage {
+        width: 280px;
+    }
+
+    .heroBackground {
+        width: 250px;
+        height: 250px;
+
+    }
+
+    .heroImage {
+        left: -8px;
+        top: -24px;
+    }
+
+    .leftContanerTag {
+        font-size: 10px;
+        top: 8%;
+        left: -16px;
+        padding: 8px 15px;
+    }
+    
+.heroCardWrapper {
+    bottom: -40px;
+}
+
+.heroCardOne, .heroCardTwo {
+    padding: 6px 10px;
+}
+.leftSide{
+    width: 45px;
+    height: 45px;
+}
+
+.title{
+    font-size: 12px;
+}
+.star{
+    width: 70%;
+    height: 10px;
+}
+.heroPrice span{
+    font-size: 12px;
+}
+.heroPrice{
+    font-size: 14px;
+}
 
 }

@@ -1,4 +1,4 @@
-
+// dark mode light mode 
 const themeToggle = document.getElementById("themeToggle");
 const themeIcon = document.getElementById("themeIcon");
 const themefoodi = document.getElementById("foodi");
@@ -15,7 +15,7 @@ themeToggle.addEventListener("click", () => {
     }
 });
 
-
+// navlinks active hole akta style add hoche jei link a click hoche sei page a route hoche.
 const navLinks = document.querySelectorAll(".navlink li a");
 const currentUrl = window.location.pathname;
 
@@ -28,3 +28,15 @@ navLinks.forEach((link) => {
         link.classList.remove("active");
     }
 })
+// hamburgar menu 
+const menuBtn = document.getElementById("openMenu");
+const navlinkBar = document.getElementById("navlink");
+
+menuBtn.addEventListener("click",() => {
+ navlinkBar.classList.toggle("toggle");
+    if (navlinkBar.classList.contains("toggle")) {
+        document.body.style.overflow = "hidden";
+    }else{
+        document.body.style.overflow = "auto";
+    }
+});

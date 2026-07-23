@@ -98,7 +98,6 @@ header {
 .navlink {
     display: flex;
     gap: 30px;
-
 }
 
 .navlink li {
@@ -138,6 +137,7 @@ header {
 .phoneBackground,
 #themeToggle {
     background-color: #39DB4A;
+    color: var(--bg-color);
     border-radius: 10px;
     padding: 8px;
     display: flex;
@@ -145,15 +145,21 @@ header {
     justify-content: center;
 }
 
+.phoneBackground:hover,
+#themeToggle:hover {
+    background-color: #6dea7a;
+}
+
 .icon {
     cursor: pointer;
     font-size: 22px;
 }
-#openMenu{
+
+#openMenu {
     display: none;
 }
 
-.mainContainer{
+.mainContainer {
     width: 100%;
     height: 100vh;
     background-color: red;
@@ -232,9 +238,6 @@ header {
 }
 
 @media (max-width: 620px) {
-    .navlink {
-        display: none;
-    }
 
     .icon:nth-child(2) {
         display: none;
@@ -243,7 +246,32 @@ header {
     .phoneBackground {
         display: none;
     }
-    #openMenu{
-    display: block;
-}
+
+    #openMenu {
+        display: block;
+        z-index: 1000;
+    }
+
+    .navlink {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        transition: left 0.4s ease-in-out;
+    }
+
+    .navlink.toggle {
+        left: 0;
+    }
+
+    .navlink li a {
+        font-size: 24px;
+    }
+
 }
